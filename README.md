@@ -114,3 +114,4 @@ ProjektKantor/
 ## Kontakt
 
 * Autor: Pucdolf
+* Repozytorium: [https://github.com/Pucdolf/Knapsack-Problem](https://github.com/Pucdolf/Knapsack-Problem)
