@@ -7,26 +7,26 @@
 
 /**
  * @class Currency
- * @brief Klasa do zarzπdzania kursami walut.
+ * @brief Klasa do zarzƒÖdzania kursami walut.
  *
- * Klasa Currency zawiera metody do wczytywania i wyúwietlania kursÛw kupna i sprzedaøy walut.
+ * Klasa Currency zawiera metody do wczytywania i wy≈õwietlania kurs√≥w kupna i sprzeda≈ºy walut.
  */
 class Currency
 {
 protected:
-    std::map<std::string, double> buyRates; /**< Mapa przechowujπca kursy kupna walut. */
-    std::map<std::string, double> sellRates; /**< Mapa przechowujπca kursy sprzedaøy walut. */
+    std::map<std::string, double> buyRates; /**< Mapa przechowujƒÖca kursy kupna walut. */
+    std::map<std::string, double> sellRates; /**< Mapa przechowujƒÖca kursy sprzeda≈ºy walut. */
 
     /**
-     * @brief Konstruktor domyúlny klasy Currency.
+     * @brief Konstruktor domy≈õlny klasy Currency.
      */
     Currency() = default;
 
     /**
-     * @brief Wczytuje kursy kupna i sprzedaøy z plikÛw.
+     * @brief Wczytuje kursy kupna i sprzeda≈ºy z plik√≥w.
      *
-     * @param[in] BuyRatesFile Nazwa pliku zawierajπcego kursy kupna.
-     * @param[in] SellRatesFile Nazwa pliku zawierajπcego kursy sprzedaøy.
+     * @param[in] BuyRatesFile Nazwa pliku zawierajƒÖcego kursy kupna.
+     * @param[in] SellRatesFile Nazwa pliku zawierajƒÖcego kursy sprzeda≈ºy.
      */
     void loadRates(std::string BuyRatesFile, std::string SellRatesFile)
     {
@@ -35,7 +35,7 @@ protected:
     }
 
     /**
-     * @brief Wyúwietla kursy kupna i sprzedaøy.
+     * @brief Wy≈õwietla kursy kupna i sprzeda≈ºy.
      */
     void showRates()
     {
@@ -45,7 +45,7 @@ protected:
         {
             std::cout << pair.first << ": " << pair.second << "\n";
         }
-        std::cout << "\nKursy sprzedaøy:\n";
+        std::cout << "\nKursy sprzedazy:\n";
         for (const auto& pair : sellRates)
         {
             std::cout << pair.first << ": " << pair.second << "\n";
@@ -56,7 +56,7 @@ private:
     /**
      * @brief Wczytuje kursy kupna z pliku.
      *
-     * @param[in] BuyRatesFile Nazwa pliku zawierajπcego kursy kupna.
+     * @param[in] BuyRatesFile Nazwa pliku zawierajƒÖcego kursy kupna.
      */
     void loadBuyRates(std::string BuyRatesFile)
     {
@@ -64,9 +64,9 @@ private:
     }
 
     /**
-     * @brief Wczytuje kursy sprzedaøy z pliku.
+     * @brief Wczytuje kursy sprzeda≈ºy z pliku.
      *
-     * @param[in] SellRatesFile Nazwa pliku zawierajπcego kursy sprzedaøy.
+     * @param[in] SellRatesFile Nazwa pliku zawierajƒÖcego kursy sprzeda≈ºy.
      */
     void loadSellRates(std::string SellRatesFile)
     {
@@ -77,7 +77,7 @@ private:
      * @brief Wczytuje kursy z pliku do podanej mapy.
      *
      * @param[in] file_name Nazwa pliku z kursami.
-     * @param[out] RatesMap Mapa, do ktÛrej zostanπ wczytane kursy.
+     * @param[out] RatesMap Mapa, do kt√≥rej zostanƒÖ wczytane kursy.
      */
     void loadRatesFromFile(const std::string file_name, std::map<std::string, double>& RatesMap)
     {
@@ -85,7 +85,7 @@ private:
 
         if (!in.is_open())
         {
-            std::cerr << "Nie uda≥o siÍ otworzyÊ pliku '" << file_name << "' !" << std::endl;
+            std::cerr << "Nie uda≈Ço siƒô otworzyƒá pliku '" << file_name << "' !" << std::endl;
             return;
         }
 
@@ -98,7 +98,7 @@ private:
             double rate;
             if (!(iss >> currency >> rate))
             {
-                std::cerr << "B≥πd wczytywania kursu z linii!" << std::endl;
+                std::cerr << "B≈ÇƒÖd wczytywania kursu z linii!" << std::endl;
                 continue;
             }
 

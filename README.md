@@ -31,24 +31,28 @@ Projekt Kantor to aplikacja konsolowa, która pozwala użytkownikowi wymieniać 
 
 ## Instalacja i uruchomienie
 
+### Wymagania
+* Kompilator: MSVC (rekomendowane Visual Studio 2022)
+* System: Windows (ze względu na użycie `system("cls")`)
+* Standard C++: C++17 lub nowszy
+
+### Kroki instalacji:
 1. Sklonuj repozytorium lub wypakuj archiwum:
-
    ```bash
-   git clone https://github.com/twoj-uzytkownik/ProjektKantor.git
-   cd ProjektKantor
+   git clone https://github.com/Pucdolf/PK2-ProjektKantor.git
+   cd "PK2 - ProjektKantor"
    ```
+
 2. Zbuduj projekt:
-
-   * Visual Studio: otwórz `ProjektKantor.sln`
-   * G++ (przykład):
-
-     ```bash
-     g++ main.cpp Kantor.cpp -o KantorApp
+   * **Visual Studio:** Otwórz plik `ProjektKantor.sln` i wybierz opcję `Build Solution` (skrót `Ctrl+Shift+B`).
+   * **MSBuild (PowerShell):**
+     ```powershell
+     msbuild ProjektKantor.sln /p:Configuration=Debug /p:Platform=x64
      ```
-3. Uruchom program:
 
-   ```bash
-   ./KantorApp
+3. Uruchom program:
+   ```powershell
+   .\x64\Debug\ProjektKantor.exe
    ```
 
 ## Użytkowanie
