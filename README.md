@@ -1,121 +1,121 @@
-# Projekt Kantor
+# Kantor Project
 
-**Opis:** Aplikacja w C++ realizująca funkcjonalność prostego kantoru walutowego. Umożliwia użytkownikowi wymianę walut, wyświetlanie dostępnych kursów oraz historii transakcji.
+**Description:** A C++ application providing basic currency exchange functionality. It allows users to exchange currencies, view current exchange rates, and check transaction history.
 
-## Spis treści
+## Table of Contents
 
-* [Opis](#opis)
-* [Funkcje](#funkcje)
-* [Technologie](#technologie)
-* [Instalacja i uruchomienie](#instalacja-i-uruchomienie)
-* [Użytkowanie](#użytkowanie)
-* [Struktura projektu](#struktura-projektu)
-* [Kontakt](#kontakt)
+* [Description](#description)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Installation and Running](#installation-and-running)
+* [Usage](#usage)
+* [Project Structure](#project-structure)
+* [Contact](#contact)
 
-## Opis
+## Description
 
-Projekt Kantor to aplikacja konsolowa, która pozwala użytkownikowi wymieniać waluty według ustalonych kursów. Program przechowuje historię wymian i umożliwia wyświetlenie kursów oraz bilansu użytkownika.
+Kantor Project is a console application that allows users to exchange currencies based on set rates. The program stores exchange history and enables viewing rates and user balance.
 
-## Funkcje
+## Features
 
-* Wymiana walut (np. PLN na EUR, USD na GBP itd.)
-* Wyświetlanie dostępnych kursów
-* Historia wykonanych transakcji
-* Obsługa błędów (np. niewystarczające środki, niepoprawne dane)
+* Currency exchange (e.g., PLN to EUR, USD to GBP, etc.)
+* Displaying available exchange rates
+* Transaction history
+* Error handling (e.g., insufficient funds, invalid data)
 
-## Technologie
+## Technologies
 
 * C++
-* Standardowa biblioteka C++ (STL)
-* Kompilator zgodny z C++20 lub nowszym
+* C++ Standard Library (STL)
+* Compiler compatible with C++20 or newer
 
-## Instalacja i uruchomienie
+## Installation and Running
 
-### Wymagania
-* Kompilator: MSVC (rekomendowane Visual Studio 2022)
-* System: Windows (ze względu na użycie `system("cls")`)
-* Standard C++: C++17 lub nowszy
+### Requirements
+* Compiler: MSVC (Visual Studio 2022 recommended)
+* System: Windows (due to the use of `system("cls")`)
+* C++ Standard: C++17 or newer
 
-### Kroki instalacji:
-1. Sklonuj repozytorium lub wypakuj archiwum:
+### Installation Steps:
+1. Clone the repository or extract the archive:
    ```bash
    git clone https://github.com/Pucdolf/PK2-ProjektKantor.git
    cd "PK2 - ProjektKantor"
    ```
 
-2. Zbuduj projekt:
-   * **Visual Studio:** Otwórz plik `ProjektKantor.sln` i wybierz opcję `Build Solution` (skrót `Ctrl+Shift+B`).
+2. Build the project:
+   * **Visual Studio:** Open the `ProjektKantor.sln` file and select `Build Solution` (shortcut `Ctrl+Shift+B`).
    * **MSBuild (PowerShell):**
      ```powershell
      msbuild ProjektKantor.sln /p:Configuration=Debug /p:Platform=x64
      ```
 
-3. Uruchom program:
+3. Run the program:
    ```powershell
    .\x64\Debug\ProjektKantor.exe
    ```
 
-## Użytkowanie
+## Usage
 
-Po uruchomieniu programu użytkownik trafia do głównego menu, z którego może przejść do trybu klienta lub administratora.
+After starting the program, the user enters the main menu, from which they can switch to client or administrator mode.
 
-### Menu główne:
+### Main Menu:
 
 ```
 +---------------------+
 | --Main Menu--       |
-| 1. Klient           |
+| 1. Client           |
 | 2. Administrator    |
-| 3. Wyjdz            |
+| 3. Exit             |
 +---------------------+
-Wybierz opcję [1-3]:
+Select option [1-3]:
 ```
 
-### Tryb klienta:
+### Client Mode:
 
 ```
 +--------------------------------------------------+
-| 1. Wyświetl aktualne kursy walut                |
-| 2. Dokonaj transakcji kupna waluty              |
-| 3. Dokonaj transakcji sprzedaży waluty          |
-| 4. Menu główne                                  |
-| 5. Wyjście                                      |
+| 1. View current exchange rates                  |
+| 2. Perform a buy transaction                    |
+| 3. Perform a sell transaction                   |
+| 4. Main Menu                                    |
+| 5. Exit                                         |
 +--------------------------------------------------+
-Wybierz opcję [1-5]:
+Select option [1-5]:
 ```
 
-### Tryb administratora:
+### Admin Mode:
 
 ```
 +--------------------------------------------------------------+
 | --Admin--                                                   |
-| 1. Wyświetl aktualne kursy walut                            |
-| 2. Aktualizuj kursy walut                                   |
-| 3. Pokaż zasoby                                             |
-| 4. Dodaj zasoby                                             |
-| 5. Pokaż historię transakcji                                |
-| 6. Wyczyść historię transakcji                              |
-| 7. Zmień hasło                                              |
-| 8. Menu główne                                              |
-| 9. Wyjście                                                  |
+| 1. View current exchange rates                              |
+| 2. Update exchange rates                                    |
+| 3. Show resources                                           |
+| 4. Add resources                                            |
+| 5. Show transaction history                                 |
+| 6. Clear transaction history                                |
+| 7. Change password                                          |
+| 8. Main Menu                                                |
+| 9. Exit                                                     |
 +--------------------------------------------------------------+
-Wybierz opcję [1-9]:
+Select option [1-9]:
 ```
 
-## Struktura projektu
+## Project Structure
 
 ```
 ProjektKantor/
 ├── main.cpp
 ├── Kantor.cpp
 ├── Kantor.h
-├── kursy.txt           # plik z kursami walut
-├── historia.txt        # zapis historii wymian
-├── ProjektKantor.sln   # projekt Visual Studio (jeśli dotyczy)
+├── kursy.txt           # file with exchange rates
+├── historia.txt        # transaction history log
+├── ProjektKantor.sln   # Visual Studio solution (if applicable)
 └── README.md
 ```
 
-## Kontakt
+## Contact
 
-* Autor: Pucdolf
-* Repozytorium: [https://github.com/Pucdolf/Knapsack-Problem](https://github.com/Pucdolf/Knapsack-Problem)
+* Author: Pucdolf
+* Repository: [https://github.com/Pucdolf/Knapsack-Problem](https://github.com/Pucdolf/Knapsack-Problem)
